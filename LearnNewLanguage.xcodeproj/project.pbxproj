@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300B429E2372BEB700EA5AF7 /* DescribeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B429D2372BEB700EA5AF7 /* DescribeImage.swift */; };
+		300B42A02372BF3700EA5AF7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B429F2372BF3700EA5AF7 /* ImagePicker.swift */; };
 		304C3349235573C4000341B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C3348235573C4000341B7 /* AppDelegate.swift */; };
 		304C334B235573C4000341B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C334A235573C4000341B7 /* SceneDelegate.swift */; };
 		304C334D235573C4000341B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C334C235573C4000341B7 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		300B429D2372BEB700EA5AF7 /* DescribeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribeImage.swift; sourceTree = "<group>"; };
+		300B429F2372BF3700EA5AF7 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		304C3345235573C4000341B7 /* LearnNewLanguage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnNewLanguage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304C3348235573C4000341B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304C334A235573C4000341B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +65,10 @@
 				304C334C235573C4000341B7 /* ViewController.swift */,
 				304C334E235573C4000341B7 /* Main.storyboard */,
 				304C3351235573D5000341B7 /* Assets.xcassets */,
+				300B429F2372BF3700EA5AF7 /* ImagePicker.swift */,
 				304C3353235573D5000341B7 /* LaunchScreen.storyboard */,
 				304C3356235573D5000341B7 /* Info.plist */,
+				300B429D2372BEB700EA5AF7 /* DescribeImage.swift */,
 			);
 			path = LearnNewLanguage;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				304C334D235573C4000341B7 /* ViewController.swift in Sources */,
+				300B429E2372BEB700EA5AF7 /* DescribeImage.swift in Sources */,
+				300B42A02372BF3700EA5AF7 /* ImagePicker.swift in Sources */,
 				304C3349235573C4000341B7 /* AppDelegate.swift in Sources */,
 				304C334B235573C4000341B7 /* SceneDelegate.swift in Sources */,
 			);
