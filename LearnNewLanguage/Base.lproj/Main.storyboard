@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cognitive_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LearnNewLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,20 +25,39 @@
                                     <constraint firstAttribute="height" constant="60" id="AYP-Kn-pbU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Choose Image">
+                                <state key="normal" title="Text History">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="showPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqV-xd-DHg"/>
+                                    <segue destination="jAt-Oo-mAe" kind="show" id="TWS-g8-g4B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI5-ck-wP3">
+                                <rect key="frame" x="20" y="709" width="374" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nMc-Mr-m8Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Choose Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rmZ-ff-Dqw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C4Z-JO-C5b" secondAttribute="trailing" constant="18" id="4Rw-x4-ENe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OI5-ck-wP3" secondAttribute="trailing" constant="20" id="4sF-m4-hE0"/>
+                            <constraint firstItem="IEb-o8-NBK" firstAttribute="top" secondItem="OI5-ck-wP3" secondAttribute="bottom" constant="15" id="Cwy-Jn-1FN"/>
+                            <constraint firstItem="OI5-ck-wP3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="665" id="KA4-0f-pt3"/>
                             <constraint firstItem="IEb-o8-NBK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="KIb-Ym-U9o"/>
                             <constraint firstItem="C4Z-JO-C5b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="T1i-zC-vF3"/>
                             <constraint firstItem="C4Z-JO-C5b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="X1W-g2-flY"/>
+                            <constraint firstItem="OI5-ck-wP3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gyA-2e-aEO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IEb-o8-NBK" secondAttribute="bottom" constant="18" id="iT4-wi-e9U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IEb-o8-NBK" secondAttribute="trailing" constant="18" id="jcQ-vU-Wl3"/>
                         </constraints>
@@ -57,7 +75,7 @@
         <!--View Controller-->
         <scene sceneID="qz2-fb-amu">
             <objects>
-                <viewController id="orp-LP-zFl" customClass="ViewController" customModule="Cognitive_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="orp-LP-zFl" customClass="ViewController" customModule="LearnNewLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nxo-9j-Iaa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +106,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAa-Xv-Dll" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531.8840579710145" y="105.80357142857143"/>
+            <point key="canvasLocation" x="635" y="100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bQ4-aS-HJE">
+            <objects>
+                <viewController id="jAt-Oo-mAe" customClass="ViewController" customModule="LearnNewLanguage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nk6-9A-zT7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="J3L-pH-DFl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nWj-gl-rVC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9L-rO-Jgo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="789"/>
         </scene>
     </scenes>
 </document>
