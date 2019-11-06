@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var imagePicker: ImagePicker?
     
-    let cognitivesServicesAPIKey = "YOUR_API_KEY_HERE"
+    let cognitivesServicesAPIKey = "insert key here"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         guard let selectedImage = selectedImage else { return }
         
         // URL for cognitive services tag API
-        guard let url = URL(string: "https://unitec-computer-vision.cognitiveservices.azure.com/vision/v1.0/describe") else { return }
+        guard let url = URL(string: "insert url here") else { return }
         
         // API request
         var request = URLRequest(url: url)
