@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     var imagePicker: ImagePicker?
     
-    let cognitivesServicesAPIKey = "insert key here"
+    let cognitivesServicesAPIKey = "1cb21888a87e4b538762c18e3e48fd26"
+    let cognitivesServicesAPIKey2 = "791e2c680cdc41b197be2fcdd929e4c1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
         guard let selectedImage = selectedImage else { return }
         
         // URL for cognitive services tag API
-        guard let url = URL(string: "insert url here") else { return }
+        guard let url = URL(string: "https://westcentralus.api.cognitive.microsoft.com/vision") else { return }
         
         // API request
         var request = URLRequest(url: url)
