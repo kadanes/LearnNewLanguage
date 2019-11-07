@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var responseLabel: UILabel!
+    var responseResult: String?
     
     var imagePicker: ImagePicker?
     
@@ -29,8 +30,14 @@ class ViewController: UIViewController {
     // Handle button press
     @IBAction func showPicker(_ sender: UIButton) {
         imagePicker?.present()
+        
+        
+        
     }
     
+    @IBAction func analyzeImage(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToResult", sender: self)
+    }
     
     // Retrieve tags
     private func getTags(selectedImage: UIImage?) {
@@ -48,7 +55,7 @@ class ViewController: UIViewController {
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, let response = response as? HTTPURLResponse else { return }
-            
+            print(response.statusCode) // console debugging comment out after
             if response.statusCode == 200 {
 //                let responseString = String(data: data, encoding: .utf8)
                 let describeImage = try? JSONDecoder().decode(DescribeImage.self, from: data)
@@ -56,6 +63,7 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     if captions.count > 0 {
                         self.responseLabel.text = captions[0].text
+                        self.responseResult = captions[0].text
                     } else {
                         self.responseLabel.text = "No captions available"
                     }
@@ -78,6 +86,19 @@ extension ViewController: ImagePickerDelegate {
     func didSelectImage(image: UIImage?) {
         self.imageView.image = image
         getTags(selectedImage: image)
+    }
+    
+    //
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult"{
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.imageResult = "something from the response" //responseResult
+        }
+        
+        if segue.identifier == "goToHistory"{
+            let destinantionVC = segue.destination as! HistoryViewController
+        }
+        
     }
 }
 
