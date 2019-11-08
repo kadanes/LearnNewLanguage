@@ -65,7 +65,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="C4Z-JO-C5b" id="cLK-wq-uAK"/>
-                        <segue destination="orp-LP-zFl" kind="show" id="GLW-rn-QWQ"/>
+                        <segue destination="orp-LP-zFl" kind="show" identifier="goToResult" id="GLW-rn-QWQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

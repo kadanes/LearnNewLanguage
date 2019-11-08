@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     
     var imagePicker: ImagePicker?
     
-    let cognitivesServicesAPIKey = "1cb21888a87e4b538762c18e3e48fd26"
-    let cognitivesServicesAPIKey2 = "791e2c680cdc41b197be2fcdd929e4c1"
+    let cognitivesServicesAPIKey = "0e05d1cd15f34e8d9baa2584f5311722"
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         guard let selectedImage = selectedImage else { return }
         
         // URL for cognitive services tag API
-        guard let url = URL(string: "https://westcentralus.api.cognitive.microsoft.com/vision") else { return }
+        guard let url = URL(string: "https://unitec-assignment-three.cognitiveservices.azure.com/vision/v2.0/analyze") else { return }
         
         // API request
         var request = URLRequest(url: url)
@@ -67,7 +67,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
         // Resume task
         task.resume()
     }
@@ -79,7 +78,6 @@ extension ViewController: ImagePickerDelegate {
     func didSelectImage(image: UIImage?) {
         self.imageView.image = image
         getTags(selectedImage: image)
-        
     }
 }
 
