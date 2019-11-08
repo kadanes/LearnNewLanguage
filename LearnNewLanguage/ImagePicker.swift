@@ -1,9 +1,10 @@
 //
 //  ImagePicker.swift
-//  Cognitive Services
+//  LearnNewLanguage
 //
-//  Created by Hayden Do on 23/09/19.
-//  Copyright © 2019 Unitec. All rights reserved.
+//  Created by Swati Sharma on 15/10/19.
+//  Copyright © 2019 Ankur Lakhanpal. All rights reserved.
+//
 //
 
 import UIKit
