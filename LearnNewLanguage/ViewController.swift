@@ -59,11 +59,12 @@ class ViewController: UIViewController {
             if response.statusCode == 200 {
 //                let responseString = String(data: data, encoding: .utf8)
                 let describeImage = try? JSONDecoder().decode(DescribeImage.self, from: data)
-                guard let captions = describeImage?.description?.captions else { return }
+                print(describeImage?.categories?[0].name) //console debugging to see if json returned/stored
+                guard let captions = describeImage?.categories else { return }
                 DispatchQueue.main.async {
                     if captions.count > 0 {
-                        self.responseLabel.text = captions[0].text
-                        self.responseResult = captions[0].text
+                        //self.responseLabel.text = captions[0].name // returns error string to uilabel nil
+                        self.responseResult = captions[0].name
                     } else {
                         self.responseLabel.text = "No captions available"
                     }
@@ -92,7 +93,7 @@ extension ViewController: ImagePickerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult"{
             let destinationVC = segue.destination as! ResultsViewController
-            destinationVC.imageResult = "something from the response" //responseResult
+            destinationVC.imageResult = responseResult
         }
         
         if segue.identifier == "goToHistory"{
@@ -100,6 +101,9 @@ extension ViewController: ImagePickerDelegate {
         }
         
     }
+    
+   
+    
 }
 
 
