@@ -15,6 +15,8 @@
 		304C3350235573C4000341B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304C334E235573C4000341B7 /* Main.storyboard */; };
 		304C3352235573D5000341B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304C3351235573D5000341B7 /* Assets.xcassets */; };
 		304C3355235573D5000341B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304C3353235573D5000341B7 /* LaunchScreen.storyboard */; };
+		6ABA479D237493EA00F2546E /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA479C237493EA00F2546E /* ResultsViewController.swift */; };
+		6ABA479F2374BBFD00F2546E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA479E2374BBFD00F2546E /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		304C3351235573D5000341B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		304C3354235573D5000341B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		304C3356235573D5000341B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ABA479C237493EA00F2546E /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		6ABA479E2374BBFD00F2546E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				304C334A235573C4000341B7 /* SceneDelegate.swift */,
 				304C334C235573C4000341B7 /* ViewController.swift */,
 				304C334E235573C4000341B7 /* Main.storyboard */,
+				6ABA479E2374BBFD00F2546E /* HistoryViewController.swift */,
+				6ABA479C237493EA00F2546E /* ResultsViewController.swift */,
 				304C3351235573D5000341B7 /* Assets.xcassets */,
 				300B429F2372BF3700EA5AF7 /* ImagePicker.swift */,
 				304C3353235573D5000341B7 /* LaunchScreen.storyboard */,
@@ -149,6 +155,8 @@
 				300B42A02372BF3700EA5AF7 /* ImagePicker.swift in Sources */,
 				304C3349235573C4000341B7 /* AppDelegate.swift in Sources */,
 				304C334B235573C4000341B7 /* SceneDelegate.swift in Sources */,
+				6ABA479F2374BBFD00F2546E /* HistoryViewController.swift in Sources */,
+				6ABA479D237493EA00F2546E /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
