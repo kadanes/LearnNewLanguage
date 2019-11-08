@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         guard let selectedImage = selectedImage else { return }
         
         // URL for cognitive services tag API
-        guard let url = URL(string: "https://unitec-assignment-three.cognitiveservices.azure.com/vision/v2.0/analyze") else { return }
+        guard let url = URL(string: "https://unitec-assignment-three.cognitiveservices.azure.com/vision/v2.0/describe") else { return }
         
         // API request
         var request = URLRequest(url: url)
@@ -59,12 +59,13 @@ class ViewController: UIViewController {
             if response.statusCode == 200 {
 //                let responseString = String(data: data, encoding: .utf8)
                 let describeImage = try? JSONDecoder().decode(DescribeImage.self, from: data)
-                print(describeImage?.categories?[0].name) //console debugging to see if json returned/stored
-                guard let captions = describeImage?.categories else { return }
+                print(describeImage?.description?.captions?[0].text)
+                     //console debugging to see if json returned/stored
+                guard let captions = describeImage?.description?.captions else { return }
                 DispatchQueue.main.async {
                     if captions.count > 0 {
                         //self.responseLabel.text = captions[0].name // returns error string to uilabel nil
-                        self.responseResult = captions[0].name
+                        self.responseResult = captions[0].text
                     } else {
                         self.responseLabel.text = "No captions available"
                     }
@@ -93,7 +94,7 @@ extension ViewController: ImagePickerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult"{
             let destinationVC = segue.destination as! ResultsViewController
-            destinationVC.imageResult = responseResult
+            destinationVC.imageResult = responseResult?.replacingOccurrences(of: "_", with: " ")
         }
         
         if segue.identifier == "goToHistory"{

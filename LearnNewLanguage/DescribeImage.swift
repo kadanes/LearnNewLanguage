@@ -10,17 +10,18 @@
 import Foundation
 
 struct DescribeImage: Decodable {
-    let categories: [Categories]?
+    let description: Description?
     let requestId: String?
     let metadata: Metadata?
 }
 
-struct Categories: Decodable {
-    let name: String?
-    let score: Float?
+struct Description: Decodable {
+    let captions: [Captions]?
+    let tags: [String]?
+    
 }
 
-struct Caption: Decodable {
+struct Captions: Decodable {
     let text: String?
     let confidence: Float?
 }
@@ -29,5 +30,7 @@ struct Metadata: Decodable{
     let width: Int?
     let height: Int?
     let format: String?
+
+
 }
 
