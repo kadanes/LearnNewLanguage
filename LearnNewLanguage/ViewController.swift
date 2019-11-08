@@ -93,7 +93,7 @@ extension ViewController: ImagePickerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult"{
             let destinationVC = segue.destination as! ResultsViewController
-            destinationVC.imageResult = responseResult
+            destinationVC.imageResult = responseResult?.replacingOccurrences(of: "_", with: " ")
         }
         
         if segue.identifier == "goToHistory"{
