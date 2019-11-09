@@ -15,9 +15,20 @@
 		304C3350235573C4000341B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304C334E235573C4000341B7 /* Main.storyboard */; };
 		304C3352235573D5000341B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304C3351235573D5000341B7 /* Assets.xcassets */; };
 		304C3355235573D5000341B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304C3353235573D5000341B7 /* LaunchScreen.storyboard */; };
+		3098D04323775AB7002A91A4 /* LearnNewLanguageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3098D04223775AB7002A91A4 /* LearnNewLanguageTests.swift */; };
 		6ABA479D237493EA00F2546E /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA479C237493EA00F2546E /* ResultsViewController.swift */; };
 		6ABA479F2374BBFD00F2546E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA479E2374BBFD00F2546E /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3098D04523775AB7002A91A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 304C333D235573C4000341B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 304C3344235573C4000341B7;
+			remoteInfo = LearnNewLanguage;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		300B429D2372BEB700EA5AF7 /* DescribeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribeImage.swift; sourceTree = "<group>"; };
@@ -30,12 +41,22 @@
 		304C3351235573D5000341B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		304C3354235573D5000341B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		304C3356235573D5000341B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3098D04023775AB7002A91A4 /* LearnNewLanguageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnNewLanguageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3098D04223775AB7002A91A4 /* LearnNewLanguageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnNewLanguageTests.swift; sourceTree = "<group>"; };
+		3098D04423775AB7002A91A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ABA479C237493EA00F2546E /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		6ABA479E2374BBFD00F2546E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		304C3342235573C4000341B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3098D03D23775AB7002A91A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				304C3347235573C4000341B7 /* LearnNewLanguage */,
+				3098D04123775AB7002A91A4 /* LearnNewLanguageTests */,
 				304C3346235573C4000341B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				304C3345235573C4000341B7 /* LearnNewLanguage.app */,
+				3098D04023775AB7002A91A4 /* LearnNewLanguageTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +102,15 @@
 			path = LearnNewLanguage;
 			sourceTree = "<group>";
 		};
+		3098D04123775AB7002A91A4 /* LearnNewLanguageTests */ = {
+			isa = PBXGroup;
+			children = (
+				3098D04223775AB7002A91A4 /* LearnNewLanguageTests.swift */,
+				3098D04423775AB7002A91A4 /* Info.plist */,
+			);
+			path = LearnNewLanguageTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,18 +131,40 @@
 			productReference = 304C3345235573C4000341B7 /* LearnNewLanguage.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3098D03F23775AB7002A91A4 /* LearnNewLanguageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3098D04923775AB7002A91A4 /* Build configuration list for PBXNativeTarget "LearnNewLanguageTests" */;
+			buildPhases = (
+				3098D03C23775AB7002A91A4 /* Sources */,
+				3098D03D23775AB7002A91A4 /* Frameworks */,
+				3098D03E23775AB7002A91A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3098D04623775AB7002A91A4 /* PBXTargetDependency */,
+			);
+			name = LearnNewLanguageTests;
+			productName = LearnNewLanguageTests;
+			productReference = 3098D04023775AB7002A91A4 /* LearnNewLanguageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		304C333D235573C4000341B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Ankur Lakhanpal";
 				TargetAttributes = {
 					304C3344235573C4000341B7 = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					3098D03F23775AB7002A91A4 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 304C3344235573C4000341B7;
 					};
 				};
 			};
@@ -128,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				304C3344235573C4000341B7 /* LearnNewLanguage */,
+				3098D03F23775AB7002A91A4 /* LearnNewLanguageTests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +195,13 @@
 				304C3355235573D5000341B7 /* LaunchScreen.storyboard in Resources */,
 				304C3352235573D5000341B7 /* Assets.xcassets in Resources */,
 				304C3350235573C4000341B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3098D03E23775AB7002A91A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +222,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3098D03C23775AB7002A91A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3098D04323775AB7002A91A4 /* LearnNewLanguageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3098D04623775AB7002A91A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 304C3344235573C4000341B7 /* LearnNewLanguage */;
+			targetProxy = 3098D04523775AB7002A91A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		304C334E235573C4000341B7 /* Main.storyboard */ = {
@@ -332,6 +410,48 @@
 			};
 			name = Release;
 		};
+		3098D04723775AB7002A91A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X959JP3H43;
+				INFOPLIST_FILE = LearnNewLanguageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ankur.unitec.class.exercises.LearnNewLanguageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnNewLanguage.app/LearnNewLanguage";
+			};
+			name = Debug;
+		};
+		3098D04823775AB7002A91A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X959JP3H43;
+				INFOPLIST_FILE = LearnNewLanguageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ankur.unitec.class.exercises.LearnNewLanguageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnNewLanguage.app/LearnNewLanguage";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -349,6 +469,15 @@
 			buildConfigurations = (
 				304C335A235573D5000341B7 /* Debug */,
 				304C335B235573D5000341B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3098D04923775AB7002A91A4 /* Build configuration list for PBXNativeTarget "LearnNewLanguageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3098D04723775AB7002A91A4 /* Debug */,
+				3098D04823775AB7002A91A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
