@@ -16,14 +16,17 @@ class ResultsViewController: UIViewController {
     let translateURL = "https://unitec-assignment3-translation.cognitiveservices.azure.com/sts/v1.0/issuetoken"
     let translateKey = "7c0cc4fccb60499e8c4e767bdcf94539"
 
-  
+    @IBOutlet weak var translationLabel: UILabel!
+    
     @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         translate(toTranslate: imageResult ?? "error occured")
-        self.resultLabel.text =  (imageResult ?? " ") + translatedText
+        self.resultLabel.text =  imageResult
+        //  below line was not updating label move this to within the translate function instead for it to work
+        //self.translationLabel.text = translatedText
 
         // Do any additional setup after loading the view.
     }
@@ -113,6 +116,7 @@ class ResultsViewController: UIViewController {
                 print(self.translatedText)
                 self.translatedText = langTranslations![0].translations[numberOfTranslations].text
                 print(self.translatedText)
+                self.translationLabel.text = self.translatedText
             }
         }
         

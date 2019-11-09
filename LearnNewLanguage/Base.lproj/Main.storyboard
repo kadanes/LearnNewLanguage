@@ -109,7 +109,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKH-kv-MBF">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKH-kv-MBF" userLabel="Translation Label">
                                 <rect key="frame" x="20" y="343" width="376" height="300"/>
                                 <color key="backgroundColor" red="0.90749531984329224" green="0.97062116861343384" blue="0.9078056812286377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -166,6 +166,7 @@
                     <navigationItem key="navigationItem" id="aSU-J6-LtI"/>
                     <connections>
                         <outlet property="resultLabel" destination="Hee-WE-uNr" id="V9s-Eb-Kxr"/>
+                        <outlet property="translationLabel" destination="RKH-kv-MBF" id="kZh-nJ-HK8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAa-Xv-Dll" sceneMemberID="firstResponder"/>
