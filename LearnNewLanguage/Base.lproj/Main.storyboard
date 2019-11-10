@@ -195,16 +195,15 @@
                                     <action selector="returnToMain:" destination="jAt-Oo-mAe" eventType="touchUpInside" id="7Cg-Rt-CUG"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l3N-sI-c0K" userLabel="HistoryView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l3N-sI-c0K" userLabel="HistoryView">
                                 <rect key="frame" x="20" y="14" width="374" height="680"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Pru-lT-tgH" userLabel="HistoryDetail">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pru-lT-tgH" id="n1z-1l-rbc">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iQh-Tg-gL8" userLabel="OriginalText">
@@ -229,9 +228,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="J3L-pH-DFl" firstAttribute="trailing" secondItem="l3N-sI-c0K" secondAttribute="trailing" constant="20" id="1zX-BV-nM6"/>
                             <constraint firstItem="J3L-pH-DFl" firstAttribute="bottom" secondItem="JSA-Dl-RXH" secondAttribute="bottom" constant="40" id="4sd-rc-5AB"/>
                             <constraint firstItem="J3L-pH-DFl" firstAttribute="trailing" secondItem="JSA-Dl-RXH" secondAttribute="trailing" constant="20" id="68U-G9-kfh"/>
+                            <constraint firstItem="l3N-sI-c0K" firstAttribute="leading" secondItem="J3L-pH-DFl" secondAttribute="leading" constant="20" id="95f-dS-tq9"/>
+                            <constraint firstItem="JSA-Dl-RXH" firstAttribute="top" secondItem="l3N-sI-c0K" secondAttribute="bottom" constant="14" id="Wru-CZ-G5W"/>
                             <constraint firstItem="JSA-Dl-RXH" firstAttribute="leading" secondItem="J3L-pH-DFl" secondAttribute="leading" constant="20" id="cF4-9j-iGO"/>
+                            <constraint firstItem="l3N-sI-c0K" firstAttribute="top" secondItem="J3L-pH-DFl" secondAttribute="top" constant="14" id="jPt-XI-Ye9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J3L-pH-DFl"/>
                     </view>

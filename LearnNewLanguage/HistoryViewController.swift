@@ -9,6 +9,10 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
+    var searchHistory: [ResultItem]? = [ResultItem(resultDescription: "test 1 result",      translationDescription: "test 1 translation"),
+                                        ResultItem(resultDescription: "test 2 result", translationDescription: "test 2 translation"),
+                                        ResultItem(resultDescription: "test 3 result", translationDescription: "test 3 translation"),
+                                        ResultItem(resultDescription: "test 4 result", translationDescription: "test 4 translation")] // test array, remove/ comment out before = once code auto updates history
 
     @IBAction func returnToMain(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -19,9 +23,16 @@ class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // load items from the searchHistory array into the UI table.
+        
         // Do any additional setup after loading the view.
     }
     
+    struct ResultItem {
+        var resultDescription: String?
+        var translationDescription: String?
+        //later can add a thumbnail here if find solution
+    }
 
     /*
     // MARK: - Navigation

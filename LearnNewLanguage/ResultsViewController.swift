@@ -119,6 +119,10 @@ class ResultsViewController: UIViewController {
                 self.translationLabel.text = self.translatedText
             }
         }
+    // function to store the results of image description and the translation description to an array at suitable place to allow access across files, currently this is in hisoryVC if too hard to store access then consider moving to app delegate to see if works better.
+    func storeToHistory(origResult: String, TransResult: String){
+        //passs in the two strings
+    }
         
     }
     
