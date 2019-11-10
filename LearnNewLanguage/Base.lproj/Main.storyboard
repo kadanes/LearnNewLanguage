@@ -167,6 +167,7 @@
                     <connections>
                         <outlet property="resultLabel" destination="Hee-WE-uNr" id="V9s-Eb-Kxr"/>
                         <outlet property="translationLabel" destination="RKH-kv-MBF" id="kZh-nJ-HK8"/>
+                        <segue destination="jAt-Oo-mAe" kind="presentation" identifier="History" id="rGo-WR-5iu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAa-Xv-Dll" sceneMemberID="firstResponder"/>
@@ -242,4 +243,7 @@
             <point key="canvasLocation" x="1449" y="100"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rGo-WR-5iu"/>
+    </inferredMetricsTieBreakers>
 </document>
