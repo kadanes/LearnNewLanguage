@@ -102,9 +102,6 @@ extension ViewController: ImagePickerDelegate {
         }
         
     }
-    
-   
-    
 }
 
 

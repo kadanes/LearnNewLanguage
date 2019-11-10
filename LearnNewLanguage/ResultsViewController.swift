@@ -119,7 +119,22 @@ class ResultsViewController: UIViewController {
                 self.translationLabel.text = self.translatedText
             }
         }
-        
+    
+    struct TextHistory {
+           var Originaltext :String
+           var TranslatedText : String
+       }
+       
+    class DataModel {
+           var textData: [TextHistory] = []
+           
+           func addTextDetail(translationLabel: String, originalLabel: String ){
+               textData.append(TextHistory(Originaltext: originalLabel, TranslatedText: translationLabel))
+            print(textData)
+           }
+       }
+       let dataModel = DataModel()
+       
     }
     
     /*
