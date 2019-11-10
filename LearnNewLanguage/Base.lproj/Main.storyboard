@@ -239,6 +239,9 @@
                         <viewLayoutGuide key="safeArea" id="J3L-pH-DFl"/>
                     </view>
                     <navigationItem key="navigationItem" id="nWj-gl-rVC" userLabel="Text History"/>
+                    <connections>
+                        <outlet property="historyResult" destination="l3N-sI-c0K" id="TCQ-Q5-yrD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9L-rO-Jgo" sceneMemberID="firstResponder"/>
             </objects>

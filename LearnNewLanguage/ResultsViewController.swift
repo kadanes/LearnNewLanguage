@@ -15,13 +15,17 @@ class ResultsViewController: UIViewController {
     let jsonEncoder = JSONEncoder()
     let translateURL = "https://unitec-assignment3-translation.cognitiveservices.azure.com/sts/v1.0/issuetoken"
     let translateKey = "7c0cc4fccb60499e8c4e767bdcf94539"
-
+    let datafile = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("resultsHistory.plist")
+    let encoder = PropertyListEncoder()
+    let decoder = PropertyListDecoder()
+  
     @IBOutlet weak var translationLabel: UILabel!
     
     @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+          print(datafile)
         
         translate(toTranslate: imageResult ?? "error occured")
         self.resultLabel.text =  imageResult
@@ -117,15 +121,32 @@ class ResultsViewController: UIViewController {
                 self.translatedText = langTranslations![0].translations[numberOfTranslations].text
                 print(self.translatedText)
                 self.translationLabel.text = self.translatedText
+                self.storeToHistory(origResult: self.imageResult ?? " error", TransResult: self.translatedText ?? "error translate" )
             }
         }
     // function to store the results of image description and the translation description to an array at suitable place to allow access across files, currently this is in hisoryVC if too hard to store access then consider moving to app delegate to see if works better.
     func storeToHistory(origResult: String, TransResult: String){
         //passs in the two strings
-    }
+        var resultItem = ResultItem(rD: origResult, tD: TransResult)
+        do {
+            let data = try encoder.encode(resultItem)
+            try data.write(to: self.datafile!)
+        }catch {
+            print("error encoding item ")
+        }
         
     }
     
+struct ResultItem: Encodable, Decodable {
+    var resultDescription: String?
+    var translationDescription: String?
+    //later can add a thumbnail here if find solution
+    
+    init( rD: String, tD: String) {
+        resultDescription = rD
+        translationDescription = tD
+    }
+}
     /*
     // MARK: - Navigation
 
@@ -137,3 +158,4 @@ class ResultsViewController: UIViewController {
     */
 
 
+}

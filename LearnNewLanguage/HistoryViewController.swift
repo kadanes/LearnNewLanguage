@@ -9,11 +9,15 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
-    var searchHistory: [ResultItem]? = [ResultItem(resultDescription: "test 1 result",      translationDescription: "test 1 translation"),
-                                        ResultItem(resultDescription: "test 2 result", translationDescription: "test 2 translation"),
-                                        ResultItem(resultDescription: "test 3 result", translationDescription: "test 3 translation"),
-                                        ResultItem(resultDescription: "test 4 result", translationDescription: "test 4 translation")] // test array, remove/ comment out before = once code auto updates history
+    var searchHistory: [ResultItem]? = [ResultItem(rD: "test 1 result",      tD: "test 1 translation"),
+                                        ResultItem(rD: "test 2 result", tD: "test 2 translation"),
+                                        ResultItem(rD: "test 3 result", tD: "test 3 translation"),
+                                        ResultItem(rD: "test 4 result", tD: "test 4 translation")] // test array, remove/ comment out before = once code auto updates history
 
+    @IBOutlet weak var historyResult: UITableView!
+    
+    
+    
     @IBAction func returnToMain(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -24,7 +28,7 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
 
         // load items from the searchHistory array into the UI table.
-        
+        //history
         // Do any additional setup after loading the view.
     }
     
@@ -32,6 +36,11 @@ class HistoryViewController: UIViewController {
         var resultDescription: String?
         var translationDescription: String?
         //later can add a thumbnail here if find solution
+        
+        init( rD: String, tD: String) {
+            resultDescription = rD
+            translationDescription = tD
+        }
     }
 
     /*
