@@ -103,7 +103,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Converted text into German Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz1-Li-igD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted text into German Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz1-Li-igD">
                                 <rect key="frame" x="20" y="319" width="297" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -153,10 +153,10 @@
                             <constraint firstItem="2XM-gI-uSJ" firstAttribute="bottom" secondItem="Hee-WE-uNr" secondAttribute="bottom" constant="517" id="VlQ-hz-715"/>
                             <constraint firstItem="Uz1-Li-igD" firstAttribute="leading" secondItem="2XM-gI-uSJ" secondAttribute="leading" constant="20" id="VoF-YL-yp9"/>
                             <constraint firstItem="2XM-gI-uSJ" firstAttribute="bottom" secondItem="Uz1-Li-igD" secondAttribute="bottom" constant="468" id="Wo1-HT-Xvv"/>
-                            <constraint firstItem="2XM-gI-uSJ" firstAttribute="trailing" secondItem="Uz1-Li-igD" secondAttribute="trailing" constant="200" id="bB3-tf-ed3"/>
                             <constraint firstItem="2XM-gI-uSJ" firstAttribute="trailing" secondItem="COe-I5-fqw" secondAttribute="trailing" constant="123" id="guI-qf-8XS"/>
                             <constraint firstItem="2XM-gI-uSJ" firstAttribute="trailing" secondItem="COe-I5-fqw" secondAttribute="trailing" constant="123" id="lHy-gq-KoO"/>
                             <constraint firstItem="GE5-aQ-lyA" firstAttribute="leading" secondItem="2XM-gI-uSJ" secondAttribute="leading" constant="70" id="lpL-Cj-0FX"/>
+                            <constraint firstItem="2XM-gI-uSJ" firstAttribute="trailing" secondItem="Uz1-Li-igD" secondAttribute="trailing" constant="97" id="mL6-ec-bdZ"/>
                             <constraint firstItem="COe-I5-fqw" firstAttribute="top" secondItem="2XM-gI-uSJ" secondAttribute="top" constant="20" id="qx3-n9-Kyp"/>
                             <constraint firstItem="2XM-gI-uSJ" firstAttribute="trailing" secondItem="RKH-kv-MBF" secondAttribute="trailing" constant="18" id="tiX-cJ-bpw"/>
                             <constraint firstItem="2XM-gI-uSJ" firstAttribute="bottom" secondItem="RKH-kv-MBF" secondAttribute="bottom" constant="165" id="yRh-hu-gIY"/>
@@ -167,6 +167,7 @@
                     <connections>
                         <outlet property="resultLabel" destination="Hee-WE-uNr" id="V9s-Eb-Kxr"/>
                         <outlet property="translationLabel" destination="RKH-kv-MBF" id="kZh-nJ-HK8"/>
+                        <segue destination="jAt-Oo-mAe" kind="presentation" id="0V2-bH-RHW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAa-Xv-Dll" sceneMemberID="firstResponder"/>
@@ -236,10 +237,17 @@
                         <viewLayoutGuide key="safeArea" id="J3L-pH-DFl"/>
                     </view>
                     <navigationItem key="navigationItem" id="nWj-gl-rVC" userLabel="Text History"/>
+                    <connections>
+                        <outlet property="OriginalTextLabel" destination="upY-EO-VMc" id="xtm-hQ-CEf"/>
+                        <outlet property="TranslatedTextLabel" destination="iQh-Tg-gL8" id="pUq-UH-jvo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9L-rO-Jgo" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1449" y="100"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0V2-bH-RHW"/>
+    </inferredMetricsTieBreakers>
 </document>

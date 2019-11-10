@@ -14,7 +14,9 @@ class HistoryViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
         
-   
+    @IBOutlet weak var OriginalTextLabel: UILabel!
+    
+    @IBOutlet weak var TranslatedTextLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

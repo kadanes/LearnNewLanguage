@@ -93,11 +93,11 @@
 				304C334E235573C4000341B7 /* Main.storyboard */,
 				6ABA479E2374BBFD00F2546E /* HistoryViewController.swift */,
 				6ABA479C237493EA00F2546E /* ResultsViewController.swift */,
-				304C3351235573D5000341B7 /* Assets.xcassets */,
 				300B429F2372BF3700EA5AF7 /* ImagePicker.swift */,
 				304C3353235573D5000341B7 /* LaunchScreen.storyboard */,
 				304C3356235573D5000341B7 /* Info.plist */,
 				300B429D2372BEB700EA5AF7 /* DescribeImage.swift */,
+				304C3351235573D5000341B7 /* Assets.xcassets */,
 			);
 			path = LearnNewLanguage;
 			sourceTree = "<group>";
